@@ -19,10 +19,13 @@ This app takes in two inputs from the user, destination and travel date, to make
 ## Preview
 
 - Desktop
-  <img src="/img/preview-desktop.png">
+
+  <img src="/img/preview-desktop.png" height="500px">
 
 - Tablet
-  <img src="/img/preview-tablet.png">
+
+  <img src="/img/preview-tablet.png" height="500px">
 
 - Mobile
-  <img src="/img/preview-mobile.png">
+
+  <img src="/img/preview-mobile.png" height="500px">
