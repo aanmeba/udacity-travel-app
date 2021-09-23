@@ -1,0 +1,264 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 15%, #7ee8fa 90%);
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  margin: 1rem 0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+header {
+  margin-top: 6rem;
+}
+
+.container-input {
+  display: flex;
+  justify-content: center;
+}
+
+.container-city {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.container-arrival {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+label {
+  display: block;
+  font-size: 27px;
+}
+
+input {
+  height: 50px;
+  width: 250px;
+  background: transparent;
+  color: #000;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  /* border: 1px, #000; */
+  border: 0;
+}
+
+#search {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border: 1px black solid;
+  padding: 2px;
+  margin: 0 1rem;
+  background: transparent;
+  color: #000;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.title {
+  font-size: 27px;
+  text-align: center;
+  margin-top: 3rem;
+  display: block;
+}
+
+.container-results {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 27px;
+  margin: 2rem auto;
+}
+
+.display-city {
+  margin: 1rem;
+  width: 600px;
+}
+
+.display-city img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.display-weather {
+  color: #000;
+}
+
+.display-weather p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.resultCurrent {
+  display: flex;
+}
+
+.display-weather img {
+  margin-top: 1rem;
+}
+
+.display-weather ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: #000;
+  font-family: "Oswald", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #000;
+  font-family: "Oswald", sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #000;
+  font-family: "Oswald", sans-serif;
+}
+
+/***************** Responsive page *****************/
+@media screen and (max-width: 950px) {
+  body {
+    margin: 8px auto;
+  }
+
+  header {
+    margin-top: 3rem;
+  }
+
+  .container-input {
+    display: flex;
+  }
+
+  .container-input form {
+    margin: 0 auto;
+  }
+
+  .container-city {
+    display: inline-block;
+  }
+
+  .container-arrival {
+    display: inline-block;
+  }
+
+  #search {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .container-results {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+  }
+
+  .display-city {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+
+  .display-weather {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .display-city img {
+    height: 300px;
+    object-fit: cover;
+    width: 100vmin;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    margin: 8px auto;
+  }
+
+  header {
+    margin-top: 2rem;
+  }
+
+  .container-input {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container-input form {
+    margin: 0 auto;
+  }
+
+  .container-city {
+    display: block;
+    margin: 5px auto;
+  }
+
+  .container-arrival {
+    display: block;
+    margin: 5px auto;
+  }
+
+  #search {
+    display: block;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .container-results {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+  }
+
+  .display-city {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+
+  .display-weather {
+    display: block;
+  }
+
+  .display-city img {
+    // height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+/* #container-main {
+  display: flex;
+  height: 100vh;
+  color: #000;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+} */

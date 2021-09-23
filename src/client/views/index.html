@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Don't forget to add this one line below for the responstive pages -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel Planner</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Travel Planner</h1>
+        </header>
+        <main id="container-main">
+            <section>
+                <div class="container-input">
+                    <form class="form" id="form">
+                        <div class="container-city">
+                            <label for="city">Destination:</label>
+                            <input type="text" id="city" placeholder="Enter Your Destination Here" required/>
+                        </div>
+                        <div class ="container-arrival">
+                            <label for="arrival">Arrival:</label>
+                            <input id="arrival" type="date" name="arrival" onfocus="(this.type='date')"/>
+                        </div>
+                        <!-- <input id="search" type="submit" name="" value="Let's Go!" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)"> -->
+                        <button id="search" type="submit">Let's Go!</button>
+                    </form>
+                </div>
+            </section>
+            <section id="section-results">
+                <div class="title"></div>
+                <div class="container-results">
+                    <div class="display-city"></div>
+                    <div class="display-weather"></div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load',()=> {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>
