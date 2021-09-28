@@ -43,7 +43,7 @@ app.post('/userText', async(req, res) => {
     let pixabayData = '';
     
     // GeoName API
-    const geo_key = 'ozofoz';
+    const geo_key = process.env.geo_API_KEY;
     let geoUrl = `http://api.geonames.org/searchJSON?q=${userInput.city}&maxRows=1&type=json&username=${geo_key}`;
 
     // get latitute, longitute, countryName, cityName
@@ -61,7 +61,7 @@ app.post('/userText', async(req, res) => {
     }))
 
     // Weatherbit API
-    const weather_key = 'bbf3480337fe4a0a90bfebb2598312a2';
+    const weather_key = process.env.weather_API_KEY;
     let weatherUrl = `https://api.weatherbit.io/v2.0/forecast/daily?lat=${geonameData.lat}&lon=${geonameData.lng}&key=${weather_key}`;
 
     // get weather information
@@ -78,7 +78,7 @@ app.post('/userText', async(req, res) => {
     }))
     
     // Pixabay API
-    const pixabay_key = '3682027-5088e48e7ea3921b77615eadb';
+    const pixabay_key = process.env.img_API_KEY;
     let pixabayUrl = `https://pixabay.com/api/?key=${pixabay_key}&q=${geonameData.city}&orientation=horizontal&category=places&image_type=photo`;
 
     // get the corresponding image
